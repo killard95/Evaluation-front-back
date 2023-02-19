@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="liste.js"></script>
+    <link rel="stylesheet" href="liste.css">
+    <title>Liste des courses</title>
+</head>
+<body>
+    <h1>Liste des courses</h1>
+    <div id="container">
+        <section>
+            <h2>Récupérer un produit par son id selon sa catégorie</h2>
+            <label for="get_produit_by_id">Choisissez la catégorie de vos produits</label><br><br>
+            <select name="get_produit_by_id" id="get_produit_by_id">
+                <option value="alimentaire">Alimentaire</option>
+                <option value="entretien">Entretien</option>
+            </select><br><br>
+            <label for="id">Id du produit : </label>
+            <input type="number" id="id_produit" />
+            <button id="get_by_id_button">récuperer une entrée par son id</button><br><br>
+            <div id="affich_by_id"></div>
+        </section>
+        <section>
+            <h2>Ajout d'un produit par catégorie</h2>
+            <label for="radio_create_produits">Choisissez la catégorie de vos produits</label><br><br>
+            <select name="radio_create_produits" id="radio_create_produits">
+                <option value="alimentaire">Alimentaire</option>
+                <option value="entretien">Entretien</option>
+            </select><br><br>
+            <label for="name">Nom du produit : </label>
+            <input type="text" id="create_produits"  />
+            <button id="create_button">créer un produit</button>
+        </section>
+        <section>
+            <h2>Mises à jour d'un produit selon sa catégorie</h2>
+            <label for="update_produit_by_id">Choisissez la catégorie de votre produit</label><br><br>
+            <select name="update_produit_by_id" id="update_produit_by_id">
+                <option value="alimentaire">Alimentaire</option>
+                <option value="entretien">Entretien</option>
+            </select><br><br>
+            <label for="id">Id du produit : </label>
+            <input type="number" id="id_produit_update" />
+            <label for="name">Nom du produit : </label>
+            <input type="text" id="name_produit_update" /><br><br>
+            <button id="update_produit_button">mettre à jour le produit</button>
+        </section>
+        <section>
+            <h2>Supprimer un produit par son id selon sa catégorie</h2>
+            <label for="delete_produit_by_id">Choisissez la catégorie de votre produit</label><br><br>
+            <select name="delete_produit_by_id" id="delete_produit_by_id">
+                <option value="alimentaire">Alimentaire</option>
+                <option value="entretien">Entretien</option>
+            </select><br><br>
+            <label for="id">Id du produit : </label>
+            <input type="number" id="id_produit_delete" /><br><br>
+            <button id="delete_produit_button">supprimer un produit</button>
+        </section>
+        <section>
+            <h2>Récupérer les produits par catégorie</h2>
+            <label for="produits">Choisissez la catégorie de vos produits</label><br><br>
+            <select name="produits" id="produits" >
+                <option value="alimentaire">Alimentaire</option>
+                <option value="entretien">Entretien</option>
+            </select><br><br>
+            <button id="get_all_produits">listes des produits de la catégorie</button>
+            <div id="affichProduits"></div>
+        </section>
+    </div>
+</body>
+</html>
